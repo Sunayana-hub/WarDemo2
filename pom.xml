@@ -4,7 +4,7 @@
   <groupId>webapp</groupId>
   <artifactId>WarDemo</artifactId>
   <packaging>war</packaging>
-  <version>1.0.4-SNAPSHOTS</version>
+  <version>1.0.5-SNAPSHOTS</version>
   <url>http://maven.apache.org</url>
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
