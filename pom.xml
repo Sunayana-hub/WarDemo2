@@ -50,6 +50,14 @@
 					<path>/WarDemo2</path>
 				</configuration>
 			</plugin>
+	    
+	     <plugin>            
+  <groupId>org.apache.maven.plugins</groupId>
+  <artifactId>maven-war-plugin</artifactId>
+  <configuration>
+    <url>src\main\java\webapp\WEB-INF\index.jsp</url>
+  </configuration>
+</plugin>
   </plugins>
   </build>
   
