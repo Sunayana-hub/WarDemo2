@@ -22,7 +22,9 @@
     <url>http://13.232.161.23:8081/repository/maven-snapshots/</url>
   </snapshotRepository>
 </distributionManagement>
-  
+  <build>
+    <finalName>JenkinsJar</finalName>
+  </build>
   <dependencies>
     <dependency>
       <groupId>junit</groupId>
