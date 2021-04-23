@@ -5,7 +5,6 @@
   <artifactId>WarDemo</artifactId>
   <packaging>war</packaging>
   <version>1.0-RELEASE</version>
-  <name>WarDemo</name>
   <url>http://maven.apache.org</url>
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -31,31 +30,5 @@
       <version>3.8.1</version>
       <scope>test</scope>
     </dependency>
-    <dependency>
-    <groupId>org.apache.tomcat</groupId>
-    <artifactId>tomcat</artifactId>
-    <version>8.5.0</version>
-    <type>pom</type>
-</dependency>
-  </dependencies>
-   <build>
-    <finalName>JenkinsWar</finalName>
-     <plugins>
-        <plugin>            
-  <groupId>org.apache.maven.plugins</groupId>
-  <artifactId>maven-war-plugin</artifactId>
-  <configuration>
-    <url>src\main\java\webapp\WEB-INF\index.jsp</url>
-  </configuration>
-</plugin>
-     
-     <plugin>  
- <groupId>org.apache.tomcat.maven</groupId>  
- <artifactId>tomcat8-maven-plugin</artifactId>  
- <version>2.2</version>  
- 
-</plugin>
-       
-       </plugins>
-      </build>
+   </dependencies>
 </project>
