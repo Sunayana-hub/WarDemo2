@@ -26,7 +26,7 @@ pipeline {
                 stage('deploy') {
                                    step {
                                           echo 'Deploy'
-                                          sh 'scp -o StrictHostKeyChecking=no WarDemo/target/JenkinsWar.war ec2-user@ip-172-31-32-128:/app/apache-tomcat-8.5.65/webapps'
+                                          sh 'mvn deploy'
                                           }
                                 }
                 }
