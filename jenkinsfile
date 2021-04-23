@@ -1,0 +1,51 @@
+pipeline {
+        agent any {
+        stages {
+                stage('checkout') {
+                        steps {
+                                echo 'checkout'
+                                }
+                        }
+                stage('build') {
+                            step {
+                                   echo  'Clean Build'
+                                   sh 'mvn clean compile' }
+                        }
+                stage('test') {
+                                steps {
+                                        echo 'Test'
+                                        sh 'mvn test'
+                                        }
+                                }
+                stage('package') {
+                                   step {
+                                          echo 'Package'
+                                          sh 'mvn package'
+                                        }
+                                }
+                stage('deploy') {
+                                   step {
+                                          echo 'Deploy'
+                                          sh "scp -o StrictHostKeyChecking=no WarDemo/target/JenkinsWar.war ec2-user@ip-172-31-32-128:/app/apache-tomcat-8.5.65/webapps
+                                          }
+                                }
+                }
+        }
+post {
+        always {
+            echo 'JENKINS PIPELINE'
+        }
+        success {
+            echo 'JENKINS PIPELINE SUCCESSFUL'
+        }
+        failure {
+            echo 'JENKINS PIPELINE FAILED'
+        }
+        unstable {
+            echo 'JENKINS PIPELINE WAS MARKED AS UNSTABLE'
+        }
+        changed {
+            echo 'JENKINS PIPELINE STATUS HAS CHANGED SINCE LAST EXECUTION'
+        }
+    }
+}
