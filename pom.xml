@@ -52,7 +52,7 @@
 	<artifactId>tomcat-maven-plugin</artifactId>
 				<configuration>
 					<url>http://13.232.7.87:8080/WarDemo2</url>
-					<server>TomcatServer</server>
+					<server>manager-gui</server>
 					<path>/WarDemo2</path>
 				</configuration>
 			</plugin>
